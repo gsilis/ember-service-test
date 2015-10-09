@@ -1,53 +1,20 @@
-# Service-test
+# Service Test
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ember application experiment to try acceptance-testing a call to a service object.
 
-## Prerequisites
+This came from the following situation:
+- a service that calls a native API that you don't want called in a test
+- unit testing doesn't cover the flow, as the service call is the result of a chain of actions
+- you want a test checks that actions are correctly mapped between a component and the controller/route
 
-You will need the following things properly installed on your computer.
+## Steps to install
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+Assuming you've got [brew](http://brew.sh/)
 
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+```bash
+$> brew install node
+$> npm install n
+$> n 0.12
+$> npm install -g ember-cli
+$> npm install && bower install
+```
